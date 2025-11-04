@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3e%3crect width='100' height='100' rx='20' fill='%234f46e5'/%3e%3ctext x='50' y='50' font-size='60' fill='white' text-anchor='middle' dy='.3em' font-family='sans-serif' font-weight='bold'%3eJ%3c/text%3e%3c/svg%3e" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Find the latest government job notifications, exam results, and admit cards. Your one-stop destination for all sarkari naukri updates." />
+    <meta name="keywords" content="sarkari naukri, government jobs, jobs, recruitment, exam result, admit card, jobtica" />
+    <title>Jobtica - Your Gateway to Government Jobs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+  :root {
+      --primary-color: #4f46e5; /* indigo-600 */
+      --accent-color: #9333ea;  /* purple-600 */
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  /* Responsive Tables for Admin Panel */
+  @media screen and (max-width: 768px) {
+    .responsive-table thead {
+      display: none;
+    }
+    .responsive-table tbody, .responsive-table tr, .responsive-table td {
+      display: block;
+      width: 100%;
+    }
+    .responsive-table tr {
+      margin-bottom: 1rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.5rem;
+      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+    }
+    .responsive-table td {
+      padding-left: 50%;
+      position: relative;
+      text-align: right;
+      border-bottom: 1px solid #f3f4f6;
+    }
+    .responsive-table tr td:last-child {
+      border-bottom: 0;
+    }
+    .responsive-table td:before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      width: 45%;
+      padding-left: 1rem;
+      font-weight: 600;
+      text-align: left;
+      white-space: nowrap;
+      color: #374151;
+    }
+    .responsive-table td.actions-cell {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-top: 0.75rem;
+        padding-bottom: 0.75rem;
+    }
+  }
+  
+  /* Professional Static Content Styling for Readability */
+  .static-content h2 {
+    font-size: 2.25rem; /* 36px */
+    font-weight: 800;
+    color: #1e3c72;
+    margin-top: 2.5rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 3px solid #e5e7eb;
+  }
+  .static-content h3 {
+    font-size: 1.75rem; /* 28px */
+    font-weight: 700;
+    color: #2a5298;
+    margin-top: 2.25rem;
+    margin-bottom: 1rem;
+  }
+  .static-content h4 {
+    font-size: 1.375rem; /* 22px */
+    font-weight: 700;
+    color: #374151;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+  }
+  .static-content p {
+    font-size: 1.25rem; /* 20px */
+    line-height: 1.8;
+    margin-bottom: 1.25rem;
+    color: #111827; /* Near-black for maximum contrast */
+  }
+  .static-content p.lead {
+    font-size: 1.375rem; /* 22px */
+    color: #1e3c72;
+    font-style: italic;
+    border-left: 4px solid #d1d5db;
+    padding-left: 1rem;
+  }
+  .static-content ul, .static-content ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.9;
+    font-size: 1.25rem; /* Match paragraph font size */
+    color: #111827;
+  }
+  .static-content li {
+    margin-bottom: 0.75rem;
+    padding-left: 0.5rem;
+  }
+  .static-content ul > li {
+      list-style-type: disc;
+  }
+  .static-content ol > li {
+      list-style-type: decimal;
+  }
+  .static-content ol > li > strong {
+      display: block;
+      font-weight: 700;
+      color: #1e3c72;
+      margin-bottom: 0.5rem;
+  }
+  .static-content a {
+      color: var(--primary-color);
+      text-decoration: underline;
+      text-decoration-thickness: 1.5px;
+      text-underline-offset: 2px;
+      font-weight: 500;
+      transition: color 0.2s;
+  }
+  .static-content a:hover {
+      filter: brightness(0.85);
+  }
+  .static-content strong {
+      color: #111827; /* Darker gray */
+      font-weight: 700;
+  }
+  .static-content hr {
+    border-color: #d1d5db; /* Slightly darker */
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .static-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+    font-size: 1.125rem; /* 18px */
+  }
+  .static-content th, .static-content td {
+    border: 1px solid #d1d5db;
+    padding: 0.75rem 1rem;
+    text-align: left;
+  }
+  .static-content th {
+    background-color: #f9fafb;
+    font-weight: 700;
+  }
+
+  /* Responsive typography for static content */
+  @media screen and (max-width: 640px) {
+    .static-content h2 {
+        font-size: 1.875rem; /* 30px */
+    }
+    .static-content h3 {
+        font-size: 1.5rem; /* 24px */
+    }
+    .static-content h4 {
+        font-size: 1.25rem; /* 20px */
+    }
+    .static-content p,
+    .static-content ul, 
+    .static-content ol {
+        font-size: 1.125rem; /* 18px */
+    }
+  }
+
+  /* Breaking News Marquee Animation */
+  @keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+  .animate-marquee {
+    animation: marquee 40s linear infinite;
+    will-change: transform;
+    display: inline-block;
+  }
+
+  /* Content Protection */
+  .content-protection-active {
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10+ and Edge */
+    user-select: none; /* Standard syntax */
+  }
+
+  @media print {
+    body.content-protection-active {
+      display: none !important;
+      visibility: hidden !important;
+    }
+  }
+</style>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-gray-100">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+{
+  "name": "jobtica-portal",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently \"vite\" \"node api/index.js\"",
+    "build": "vite build",
+    "lint": "echo \"Use ESLint or other linter instead of tsc\"",
+    "preview": "vite preview",
+    "start": "node api/index.js",
+  "test:db": "node test-supabase.js"
+  },
+  "dependencies": {
+    "express-rate-limit": "^7.1.5",
+    "@supabase/supabase-js": "^2.39.0",
+    "bcrypt": "^5.1.1",
+    "date-fns": "^2.30.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "multer": "^1.4.5-lts.2",
+    "quill": "^2.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-quill": "^2.0.0",
+    "react-router-dom": "^6.26.1",
+    "recharts": "^2.10.0",
+    "uuid": "^9.0.1"
+  },
+  "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@types/uuid": "^9.0.8",
+    "@vitejs/plugin-react": "^4.2.1",
+    "concurrently": "^8.2.2",
+    "typescript": "^5.2.2",
+    "vite": "^5.2.0"
+  }
+}
